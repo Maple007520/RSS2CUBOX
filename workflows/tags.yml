@@ -1,13 +1,13 @@
 variables:
-- name: 1 #ƻ������
+- name: 1 #Æ»¹ûéÙ×Ó
   value: 
     -apple
-	-orange
-- name: 2 #ƻ���㽶
+    -orange
+- name: 2 #Æ»¹ûÏã½¶
   value: 
     -apple
-	-banana
-- name: 3 #�����㽶
+    -banana
+- name: 3 #éÙ×ÓÏã½¶
   value: 
     -orange
-	-banana
+    -banana
