@@ -1,5 +1,5 @@
 variables:
-- template: variables/tags.yml
+  - template: variables/tags.yml
 on:
   rss:
     url:
