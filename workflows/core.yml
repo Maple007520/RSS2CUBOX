@@ -1,13 +1,3 @@
-tag:
-  &tags1
-    apple
-    orange
-  &tags2
-    apple
-    banana
-  &tags3
-    orange
-    banana
 on:
   rss:
     url:
@@ -27,7 +17,7 @@ jobs:
             {
               "type":"url",
               "content":"${{ on.rss.outputs.link }}", 
-              "title":"${{ on.rss.outputs.title }}",
-              "tags":["<<: *tags1"],
+              "title": "${{ on.rss.outputs.title }}",
+              "tags":["CoreRSS"],
               "folder":"CoreRSS"
             }
