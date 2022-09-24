@@ -1,13 +1,13 @@
 tags:
   &tags1
     apple
-	  orange
+    orange
   &tags2
     apple
-	  banana
+    banana
   &tags3
     orange
-	  banana
+    banana
 on:
   rss:
     url:
