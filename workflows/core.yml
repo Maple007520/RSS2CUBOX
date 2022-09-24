@@ -1,4 +1,4 @@
-document1
+document1:
 on:
   rss:
     url:
@@ -23,8 +23,8 @@ jobs:
               "folder":"RSS1"
             }
 
-  ...
-document2
+...
+document2:
 on:
   rss:
     url:
