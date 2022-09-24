@@ -22,6 +22,6 @@ jobs:
               "type":"url",
               "content":"${{ on.rss.outputs.link }}", 
               "title": "${{ on.rss.outputs.title }}",
-              "tags":["*red-color"],
+              "tags":["*tags1"],
               "folder":"CoreRSS"
             }
