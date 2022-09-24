@@ -1,51 +1,36 @@
-document1:
-  on:
-    rss:
-      url:
-        - https://api.feeddd.org/feeds/611e1fe88fae751e23641327
-        - https://sspai.com/feed
-  jobs:
-    request:
-      name: Make a HTTP Request
-      runs-on: ubuntu-latest
-      steps:
-        - name: Make a HTTP Request
-          uses: actionsflow/axios@v1
-          with:
-            url: https://cubox.pro/c/api/save/1j9awmdknaxv7a
-            method: POST
-            body: |
-              {
-                "type":"url",
-                "content":"${{ on.rss.outputs.link }}", 
-                "title": "${{ on.rss.outputs.title }}",
-                "tags":["CoreRSS"],
-                "folder":"RSS1"
-              }
-
-...
-document2:
-  on:
-    rss:
-      url:
-        - https://www.woshipm.com/feed
-        - https://www.36kr.com/feed
-        - https://rsshub.app/zhubai/luzhnan
-  jobs:
-    request:
-      name: Make a HTTP Request
-      runs-on: ubuntu-latest
-      steps:
-        - name: Make a HTTP Request
-          uses: actionsflow/axios@v1
-          with:
-            url: https://cubox.pro/c/api/save/1j9awmdknaxv7a
-            method: POST
-            body: |
-              {
-                "type":"url",
-                "content":"${{ on.rss.outputs.link }}", 
-                "title": "${{ on.rss.outputs.title }}",
-                "tags":["Tech&Life"],
-                "folder":"RSS2"
-              }
+on:
+  rss:  
+    url1:
+      - https://www.woshipm.com/feed
+      - https://www.36kr.com/feed
+      - https://rsshub.app/zhubai/luzhnan
+    url2:
+      - https://api.feeddd.org/feeds/611e1fe88fae751e23641327
+      - https://sspai.com/feed
+jobs:
+  request:
+    name: Make a HTTP Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make a HTTP Request
+        uses: actionsflow/axios@v1
+        with:
+          url: https://cubox.pro/c/api/save/1j9awmdknaxv7a
+          method: POST
+          body: |
+            {
+              ---
+              "type":"url1",
+              "content":"${{ on.rss.outputs.link }}", 
+              "title": "${{ on.rss.outputs.title }}",
+              "tags":["Tech&Life"],
+              "folder":"RSS1"
+              ...
+              ---
+              "type":"url2",
+              "content":"${{ on.rss.outputs.link }}", 
+              "title": "${{ on.rss.outputs.title }}",
+              "tags":["CoreRSS"],
+              "folder":"RSS2"
+              ...
+            }
