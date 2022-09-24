@@ -1,13 +1,13 @@
 variables:
-- name: 1 #Æ»¹ûéÙ×Ó
+- name: 1 #苹果橘子
   value: 
     -apple
     -orange
-- name: 2 #Æ»¹ûÏã½¶
+- name: 2 #苹果香蕉
   value: 
     -apple
     -banana
-- name: 3 #éÙ×ÓÏã½¶
+- name: 3 #橘子香蕉
   value: 
     -orange
     -banana
