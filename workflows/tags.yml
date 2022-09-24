@@ -1,0 +1,13 @@
+variables:
+- name: 1 #苹果橘子
+  value: 
+    -apple
+	-orange
+- name: 2 #苹果香蕉
+  value: 
+    -apple
+	-banana
+- name: 3 #橘子香蕉
+  value: 
+    -orange
+	-banana
