@@ -1,3 +1,7 @@
+tags:
+  &tags1 apple
+  &tags2 orange
+  &tags3 banana
 on:
   rss:
     url:
@@ -18,6 +22,6 @@ jobs:
               "type":"url",
               "content":"${{ on.rss.outputs.link }}", 
               "title": "${{ on.rss.outputs.title }}",
-              "tags":["CoreRSS"],
+              "tags":["*red-color"],
               "folder":"CoreRSS"
             }
