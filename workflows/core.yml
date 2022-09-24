@@ -22,7 +22,9 @@ jobs:
               "tags":["CoreRSS"],
               "folder":"RSS1"
             }
+
 ...
+
 document2
 on:
   rss:
@@ -48,4 +50,3 @@ jobs:
               "tags":["Tech&Life"],
               "folder":"RSS2"
             }
-...
