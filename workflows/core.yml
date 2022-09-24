@@ -1,7 +1,4 @@
-tags:
-  &tags1 apple
-  &tags2 orange
-  &tags3 banana
+---
 on:
   rss:
     url:
@@ -22,6 +19,33 @@ jobs:
               "type":"url",
               "content":"${{ on.rss.outputs.link }}", 
               "title": "${{ on.rss.outputs.title }}",
-              "tags":["*tags1"],
-              "folder":"CoreRSS"
+              "tags":["CoreRSS"],
+              "folder":"RSS1"
             }
+...
+---
+on:
+  rss:
+    url:
+      - https://www.woshipm.com/feed
+      - https://www.36kr.com/feed
+      - https://rsshub.app/zhubai/luzhnan
+jobs:
+  request:
+    name: Make a HTTP Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make a HTTP Request
+        uses: actionsflow/axios@v1
+        with:
+          url: https://cubox.pro/c/api/save/1j9awmdknaxv7a
+          method: POST
+          body: |
+            {
+              "type":"url",
+              "content":"${{ on.rss.outputs.link }}", 
+              "title": "${{ on.rss.outputs.title }}",
+              "tags":["Tech&Life"],
+              "folder":"RSS2"
+            }
+...
