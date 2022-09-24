@@ -23,7 +23,7 @@ jobs:
               "folder":"RSS1"
             }
 
-...
+---
 document2:
 on:
   rss:
