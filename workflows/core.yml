@@ -1,8 +1,11 @@
 on:
   rss:
     url:
-       - https://api.feeddd.org/feeds/611e1fe88fae751e23641327
-       - https://sspai.com/feed
+      - https://www.woshipm.com/feed
+      - https://www.36kr.com/feed
+      - https://rsshub.app/zhubai/luzhnan
+      - https://api.feeddd.org/feeds/611e1fe88fae751e23641327
+      - https://sspai.com/feed
 jobs:
   request:
     name: Make a HTTP Request
@@ -18,6 +21,6 @@ jobs:
               "type":"url",
               "content":"${{ on.rss.outputs.link }}", 
               "title": "${{ on.rss.outputs.title }}",
-              "tags":["${{ on.rss.outputs.category }}"],
+              "tags": "${{ on.rss.outputs.category }}",
               "folder":"RSS4"
             }
